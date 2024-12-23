@@ -1,6 +1,7 @@
 const express = require('express');
 const viewController = require('../controllers/viewController');
 const authController = require('../controllers/authController');
+const User = require('../models/userModel'); // Adjust the path as necessary
 // const bookingController = require('../controllers/bookingController');
 
 const router = express.Router();
@@ -27,5 +28,16 @@ router.post(
   authController.protect,
   viewController.updateUserData
 );
+
+// Add the manage-users route
+router.get('/manage-users', authController.protect, async (req, res) => {
+  try {
+    // Fetch users from your database
+    const users = await User.find().select('name role photo'); // Adjust the fields as necessary
+    res.render('manage-users', { users });
+  } catch (err) {
+    res.status(500).send('Error fetching users');
+  }
+});
 
 module.exports = router;

@@ -1,0 +1,16 @@
+extends base
+
+block content
+  .container
+    h1 Manage Users
+    each user in users
+      .user-row
+        .user-info
+          img(src=`/img/users/${user.photo}`, alt=`Photo of ${user.name}`)
+          div
+            p Name: #{user.name}
+            p Role: #{user.role}
+        .user-actions
+          button.edit-btn Edit
+          button.view-btn View
+          button.delete-btn Delete
