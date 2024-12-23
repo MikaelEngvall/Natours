@@ -8,7 +8,7 @@ const Email = require('../utils/email');
 
 const signToken = id => {
   return jwt.sign({ id }, process.env.JWT_SECRET, {
-    expiresIn: process.env.JWT_EXPIRES_IN * 24 * 60 * 60 * 1000
+    expiresIn: process.env.JWT_EXPIRES_IN * 24 * 60 * 60 //Convert to days
   });
 };
 
@@ -39,7 +39,6 @@ exports.signup = catchAsync(async (req, res, next) => {
   const newUser = await User.create({
     name: req.body.name,
     email: req.body.email,
-    photo: req.body.photo,
     password: req.body.password,
     passwordConfirm: req.body.passwordConfirm,
     role: req.body.role
@@ -54,24 +53,25 @@ exports.signup = catchAsync(async (req, res, next) => {
 exports.login = catchAsync(async (req, res, next) => {
   const { email, password } = req.body;
 
-  console.log('Login attempt:', { email, password });
   // 1) Check if email and password exist
   if (!email || !password) {
-    console.log('Email or password missing');
-    return next(new AppError('Please provide email and password'), 400);
+    return next(new AppError('Please provide email and password', 400));
   }
 
   // 2) Check if user exists && password is correct
   const user = await User.findOne({ email }).select('+password');
-
-  console.log('User found:', user ? 'Yes' : 'No');
-  if (!user || !(await user.correctPassword(password, user.password))) {
-    console.log('Incorrect email or password');
+  if (!user) {
+    console.log('User not found');
     return next(new AppError('Incorrect email or password', 401));
   }
 
-  console.log('Login successful');
-  // 3) Is everything ok, send token to client
+  const isPasswordCorrect = await user.correctPassword(password, user.password);
+  if (!isPasswordCorrect) {
+    console.log('Password incorrect');
+    return next(new AppError('Incorrect email or password', 401));
+  }
+
+  // 3) If everything is ok, send token to client
   createSendToken(user, 200, req, res);
 });
 

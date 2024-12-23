@@ -1,12 +1,13 @@
 [
   {
-    "_id": "6768baf3c5db4542407b9cf7",
+    "_id": "5c8a1d5b0190b214360dc057",
     "name": "Jonas Schmedtmann",
-    "email": "jonas@natours.io",
-    "role": "user",
+    "email": "admin@natours.io",
+    "role": "admin",
     "active": true,
-    "photo": "user-21.jpg",
-    "password": "$2a$12$vX1Pf17j6xevD62Oevc0AeTKU0HicttNZyYzvfcA3bR6/ylL30jxa"
+    "photo": "user-1.jpg",
+    "password": "newpassword123",
+    "passwordConfirm": "newpassword123"
   },
   {
     "_id": "5c8a1dfa2f8fb814b56fa181",
@@ -15,7 +16,8 @@
     "role": "user",
     "active": true,
     "photo": "user-2.jpg",
-    "password": "$2a$12$oLHwN0nBT05ysFoKuOn9muzZnBDuCtXySlDSdHWe2hBY9XbeLgmPO"
+    "password": "newpassword123",
+    "passwordConfirm": "newpassword123"
   },
   {
     "_id": "5c8a1e1a2f8fb814b56fa182",
@@ -24,7 +26,8 @@
     "role": "user",
     "active": true,
     "photo": "user-3.jpg",
-    "password": "$2a$12$uhFfTE/d4xvxaMWLXoaxMOwbB9GKhrAdlBhVOCEUbZ6dRnu5P7xW6"
+    "password": "newpassword123",
+    "passwordConfirm": "newpassword123"
   },
   {
     "_id": "5c8a1ec62f8fb814b56fa183",
@@ -33,7 +36,8 @@
     "role": "user",
     "active": true,
     "photo": "user-4.jpg",
-    "password": "$2a$12$Q5/tGgnSXAKesUSTJik7C.UDAXbpO37gbs4UtEqy24553xSMkpeoa"
+    "password": "newpassword123",
+    "passwordConfirm": "newpassword123"
   },
   {
     "_id": "5c8a1f292f8fb814b56fa184",
@@ -42,7 +46,8 @@
     "role": "guide",
     "active": true,
     "photo": "user-5.jpg",
-    "password": "$2a$12$o6Pq3nSNDkgUx2vyRdMff.s3j1nazLejfI3szOx6yk/ds.oHvWwHy"
+    "password": "newpassword123",
+    "passwordConfirm": "newpassword123"
   },
   {
     "_id": "5c8a1f4e2f8fb814b56fa185",
@@ -51,7 +56,8 @@
     "role": "guide",
     "active": true,
     "photo": "user-6.jpg",
-    "password": "$2a$12$kaOC.oXwj0s0tFC0bQmpUOjHz3.K5rCBYK5aAYKMvwk0RVXuBUumy"
+    "password": "newpassword123",
+    "passwordConfirm": "newpassword123"
   },
   {
     "_id": "5c8a201e2f8fb814b56fa186",
@@ -60,7 +66,8 @@
     "role": "guide",
     "active": true,
     "photo": "user-7.jpg",
-    "password": "$2a$12$b5dRni3id1DJz/OwQI9Ymes4gcU0KgJO6deYZUe63ANJrVxIMTmXm"
+    "password": "newpassword123",
+    "passwordConfirm": "newpassword123"
   },
   {
     "_id": "5c8a20d32f8fb814b56fa187",
@@ -69,7 +76,8 @@
     "role": "user",
     "active": true,
     "photo": "user-8.jpg",
-    "password": "$2a$12$KcbIcvE467oGVVZwcVh7OOT2DQdghHxLgBM3EoKceK2VuqjDWaqNK"
+    "password": "newpassword123",
+    "passwordConfirm": "newpassword123"
   },
   {
     "_id": "5c8a211f2f8fb814b56fa188",
@@ -78,7 +86,8 @@
     "role": "user",
     "active": true,
     "photo": "user-9.jpg",
-    "password": "$2a$12$FLXZzwZQ4DaDVyI3Clv.PuusZkbF7OZ8wvK1XR8aasp53Iz8Ok3tS"
+    "password": "newpassword123",
+    "passwordConfirm": "newpassword123"
   },
   {
     "_id": "5c8a21d02f8fb814b56fa189",
@@ -87,16 +96,18 @@
     "role": "lead-guide",
     "active": true,
     "photo": "user-10.jpg",
-    "password": "$2a$12$52WHbATCkcb6nVxkcJuv1ug/KzhRCBKnQVXjVRazBmIGV/DinV6GW"
+    "password": "newpassword123",
+    "passwordConfirm": "newpassword123"
   },
   {
-    "_id": "6768be21b88c372630c3fcb8",
+    "_id": "5c8a21f22f8fb814b56fa18a",
     "name": "Aarav Lynn",
     "email": "aarav@example.com",
     "role": "lead-guide",
     "active": true,
     "photo": "user-11.jpg",
-    "password": "$2a$12$IgbzZ9FpkWy90AcIhjZWt.oc8Iun1iRZnjRBAEsccCQZZQZjbhOM2"
+    "password": "newpassword123",
+    "passwordConfirm": "newpassword123"
   },
   {
     "_id": "5c8a22c62f8fb814b56fa18b",
@@ -105,7 +116,8 @@
     "role": "lead-guide",
     "active": true,
     "photo": "user-12.jpg",
-    "password": "$2a$12$YqS980AdSA0NRuc42ujYjOWQ5QaHCPsC/6BqIWlWuIKSlBzewO46S"
+    "password": "newpassword123",
+    "passwordConfirm": "newpassword123"
   },
   {
     "_id": "5c8a23412f8fb814b56fa18c",
@@ -114,16 +126,18 @@
     "role": "guide",
     "active": true,
     "photo": "user-13.jpg",
-    "password": "$2a$12$amALDAn.lCZ4DjlUJoZEveCZc6hmOu3HFrDI/0xWn8vDkW2zh.Uay"
+    "password": "newpassword123",
+    "passwordConfirm": "newpassword123"
   },
   {
-    "_id": "6768be92b88c372630c3fcbc",
+    "_id": "5c8a23c82f8fb814b56fa18d",
     "name": "Laura Wilson",
     "email": "laura@example.com",
     "role": "user",
     "active": true,
     "photo": "user-14.jpg",
-    "password": "$2a$12$jJZZPRfBbkm3psjZJs8DL.64EAu5LBs01QkdJ6S8PxC1yaLowpz2G"
+    "password": "newpassword123",
+    "passwordConfirm": "newpassword123"
   },
   {
     "_id": "5c8a23de2f8fb814b56fa18e",
@@ -132,7 +146,8 @@
     "role": "user",
     "active": true,
     "photo": "user-15.jpg",
-    "password": "$2a$12$QgMkIZEIqQxTmMx.Lw4Nge8h.WSVwijar3yvsMlcBSl/.7SGMDGBW"
+    "password": "newpassword123",
+    "passwordConfirm": "newpassword123"
   },
   {
     "_id": "5c8a24282f8fb814b56fa18f",
@@ -141,7 +156,8 @@
     "role": "user",
     "active": true,
     "photo": "user-16.jpg",
-    "password": "$2a$12$IrWStJl8gU/vuctdUsAME.VGOemColBs5KPoM9aOGfHOezG1Ixz1S"
+    "password": "newpassword123",
+    "passwordConfirm": "newpassword123"
   },
   {
     "_id": "5c8a24402f8fb814b56fa190",
@@ -150,7 +166,8 @@
     "role": "user",
     "active": true,
     "photo": "user-17.jpg",
-    "password": "$2a$12$07lVG1cPa1t5X3kO3eUjju8qvNz6dYv9lv9D4kLuMNkDu7QWv9SpW"
+    "password": "newpassword123",
+    "passwordConfirm": "newpassword123"
   },
   {
     "_id": "5c8a245f2f8fb814b56fa191",
@@ -159,7 +176,8 @@
     "role": "user",
     "active": true,
     "photo": "user-18.jpg",
-    "password": "$2a$12$StfuaPK/54c73zCg1KUVaOiQADv5bc63xfMYF1Dt6y76uo.ExCSMC"
+    "password": "newpassword123",
+    "passwordConfirm": "newpassword123"
   },
   {
     "_id": "5c8a24822f8fb814b56fa192",
@@ -168,7 +186,8 @@
     "role": "user",
     "active": true,
     "photo": "user-19.jpg",
-    "password": "$2a$12$9z8nKy7LJtMLyrzMrG4OPuj5beEAnRZYtcpuU7LE/GY0.vXuawfMW"
+    "password": "newpassword123",
+    "passwordConfirm": "newpassword123"
   },
   {
     "_id": "5c8a24a02f8fb814b56fa193",
@@ -177,6 +196,7 @@
     "role": "user",
     "active": true,
     "photo": "user-20.jpg",
-    "password": "$2a$12$KW6c/kzZM2m9s1IPmiUEROy9XQbAn1oHj8AT3Ubhr/.jVdouOZ7ze"
+    "password": "newpassword123",
+    "passwordConfirm": "newpassword123"
   }
 ]
