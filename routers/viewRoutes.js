@@ -1,6 +1,7 @@
 const express = require('express');
 const viewController = require('../controllers/viewController');
 const authController = require('../controllers/authController');
+const User = require('../models/userModel'); // Adjust the path as necessary
 // const bookingController = require('../controllers/bookingController');
 
 const router = express.Router();
@@ -27,5 +28,34 @@ router.post(
   authController.protect,
   viewController.updateUserData
 );
+
+// Add the manage-users route
+router.get('/manage-users', authController.protect, async (req, res) => {
+  try {
+    // Fetch users from your database
+    const users = await User.find().select('name role photo'); // Adjust the fields as necessary
+    res.render('manage-users', { users });
+  } catch (err) {
+    res.status(500).send('Error fetching users');
+  }
+});
+
+router.patch('/delete-user/:id', authController.protect, async (req, res) => {
+  try {
+    const user = await User.findByIdAndUpdate(
+      req.params.id,
+      { active: false },
+      { new: true }
+    );
+    if (!user) {
+      return res
+        .status(404)
+        .json({ status: 'fail', message: 'User not found' });
+    }
+    res.status(200).json({ status: 'success', data: { user } });
+  } catch (err) {
+    res.status(500).json({ status: 'error', message: 'Error deleting user' });
+  }
+});
 
 module.exports = router;
