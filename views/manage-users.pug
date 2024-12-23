@@ -13,4 +13,7 @@ block content
         .user-actions
           button.edit-btn Edit
           button.view-btn View
-          button.delete-btn Delete
+          button.delete-btn(data-id=user._id) Delete
+
+block append scripts
+  script(src="/js/index.js")

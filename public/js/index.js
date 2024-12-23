@@ -15,6 +15,7 @@ const userDataForm = document.querySelector('.form-user-data');
 const userPasswordForm = document.querySelector('.form-user-settings');
 const bookBtn = document.getElementById('book-tour');
 const alertMessage = document.querySelector('body').dataset.alert;
+const deleteButtons = document.querySelectorAll('.delete-btn');
 
 // DELEGATION
 if (mapBox) {
@@ -23,7 +24,7 @@ if (mapBox) {
 }
 
 if (loginForm) {
-  document.querySelector('.form').addEventListener('submit', e => {
+  loginForm.addEventListener('submit', e => {
     e.preventDefault();
     const email = document.getElementById('email').value;
     const password = document.getElementById('password').value;
@@ -67,4 +68,35 @@ if (bookBtn)
     const { tourId } = e.target.dataset;
     bookTour(tourId);
   });
+
 if (alertMessage) showAlert('success', alertMessage, 20);
+
+if (deleteButtons) {
+  deleteButtons.forEach(button => {
+    button.addEventListener('click', async event => {
+      const userId = event.target.getAttribute('data-id');
+      const confirmation = confirm(
+        'Are you sure you want to delete this user?'
+      );
+      if (confirmation) {
+        try {
+          const response = await fetch(`/delete-user/${userId}`, {
+            method: 'PATCH',
+            headers: {
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ active: false })
+          });
+          if (response.ok) {
+            alert('User deleted successfully');
+            location.reload();
+          } else {
+            alert('Error deleting user');
+          }
+        } catch (error) {
+          alert('Error deleting user');
+        }
+      }
+    });
+  });
+}
