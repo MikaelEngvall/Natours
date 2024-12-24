@@ -1133,6 +1133,13 @@ body {
   margin: 0.5rem;
 }
 
+.card:hover {
+  -webkit-transform: translateY(-1rem);
+  transform: translateY(-1rem);
+  -webkit-box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.2);
+}
+
 @media (max-width: 1200px) {
   .card {
     flex: 1 1 calc(50% - 1rem); /* 2 cards per row for screens smaller than 1200px */
