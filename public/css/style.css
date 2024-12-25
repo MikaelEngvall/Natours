@@ -312,7 +312,7 @@ color: var(--color-primary);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: relative;
+  position: sticky;
   z-index: 100;
 }
 
@@ -320,11 +320,27 @@ color: var(--color-primary);
   height: 3.5rem;
 }
 
+.nav {
+  display: flex;
+  align-items: center;
+}
+
+.nav__el {
+  margin-left: 2rem;
+}
+
+.nav__user-img {
+  border-radius: 50%;
+  height: 3rem;
+  margin-right: 1rem;
+}
+
 /* Media queries for responsiveness */
 @media only screen and (max-width: 62.5em) {
   .header {
     flex-direction: column;
     padding: 2rem;
+    height: auto;
   }
 
   .header__logo {
@@ -344,9 +360,14 @@ color: var(--color-primary);
 }
 
 @media only screen and (max-width: 37.5em) {
+  .header {
+    height: auto;
+  }
+
   .nav--tours,
   .nav--user {
     flex-direction: column;
+    align-items: center;
   }
 
   .nav__el {
