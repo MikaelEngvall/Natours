@@ -45,7 +45,7 @@ body {
 
 .main {
   background-color: #f7f7f7;
-  padding: 8rem 6rem;
+  padding: 5rem 2rem;
   -webkit-box-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -1107,9 +1107,9 @@ body {
 .card-container {
   max-width: 120rem;
   margin: 0 auto;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 7rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .card {
@@ -1129,7 +1129,29 @@ body {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
+  flex: 1 1 calc(33.333% - 1rem); /* Default to 3 cards per row */
+  margin: 0.5rem;
 }
+
+.card:hover {
+  -webkit-transform: translateY(-1rem);
+  transform: translateY(-1rem);
+  -webkit-box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 1200px) {
+  .card {
+    flex: 1 1 calc(50% - 1rem); /* 2 cards per row for screens smaller than 1200px */
+  }
+}
+
+@media (max-width: 768px) {
+  .card {
+    flex: 1 1 calc(100% - 1rem); /* 1 card per row for screens smaller than 768px */
+  }
+}
+
 .card__header {
   position: relative;
 }
