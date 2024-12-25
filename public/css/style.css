@@ -1,7 +1,7 @@
 :root {
   --section-rotate: 9vw;
-  --color-primary: #8A2BE2; /* BlueViolet */
-  --color-secondary: #BA55B3; /* MediumOrchid */
+  --color-primary: #5B9BD5 ; /* BlueViolet */
+  --color-secondary: #00008B; /* MediumOrchid */
   --color-dark: #444;
   --color-shadow: rgba(0, 0, 0, 0.15);
 }
@@ -162,13 +162,13 @@ body {
     linear,
     left top,
     right bottom,
-    from(rgba(186, 85, 211, 0.85)),
-    to(rgba(138, 43, 226, 0.85))
+    from(rgba(91, 155, 213, 0.85)),
+    to(rgba(30, 144, 255, 0.85))
   );
   background-image: linear-gradient(
     to bottom right,
-    from(rgba(186, 85, 211, 0.85)),
-    to(rgba(138, 43, 226, 0.85))
+    from(rgba(91, 155, 213, 0.85)),
+    to(rgba(30, 144, 255, 0.85))
   );
 }
 
@@ -225,7 +225,7 @@ body {
 
 .btn:focus {
   outline: none;
-  background-color: #4B0082;
+  background-color: #00008B;
 }
 
 .btn--white {
