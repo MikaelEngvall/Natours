@@ -16,6 +16,7 @@ const userPasswordForm = document.querySelector('.form-user-settings');
 const bookBtn = document.getElementById('book-tour');
 const alertMessage = document.querySelector('body').dataset.alert;
 const deleteButtons = document.querySelectorAll('.delete-btn');
+const signupForm = document.getElementById('signupForm');
 
 // DELEGATION
 if (mapBox) {
@@ -98,5 +99,18 @@ if (deleteButtons) {
         }
       }
     });
+  });
+}
+
+// DOM ELEMENTS
+if (signupForm) {
+  signupForm.addEventListener('submit', async e => {
+    e.preventDefault();
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const password = document.getElementById('password').value;
+    const passwordConfirm = document.getElementById('passwordConfirm').value;
+
+    await signup(name, email, password, passwordConfirm);
   });
 }

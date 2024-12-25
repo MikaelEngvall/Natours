@@ -19,7 +19,11 @@ router.get('/tours/:slug', authController.isLoggedIn, viewController.getTour);
 
 // /login
 router.get('/login', authController.isLoggedIn, viewController.getLoginForm);
-
+router.get('/signup', authController.isLoggedIn, (req, res) => {
+  res.status(200).render('signup', {
+    title: 'Sign Up'
+  });
+});
 router.get('/me', authController.protect, viewController.getAccount);
 router.get('/my-tours', authController.protect, viewController.getMyTours);
 
