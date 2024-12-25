@@ -5,16 +5,6 @@ const catchAsync = require('../utils/catchAsync');
 const AppError = require('../utils/appError');
 const factory = require('./handlerFactory');
 
-// const multerStorage = multer.diskStorage({
-//   destination: (req, file, cb) => {
-//     cb(null, 'public/img/users');
-//   },
-//   filename: (req, file, cb) => {
-//     const ext = file.mimetype.split('/')[1];
-//     cb(null, `user-${req.user.id}-${Date.now()}.${ext}`);
-//   }
-// });
-
 const multerStorage = multer.memoryStorage();
 
 const multerFilter = (req, file, cb) => {
@@ -47,14 +37,6 @@ exports.resizeUserPhoto = catchAsync(async (req, res, next) => {
 });
 
 const filterObj = (obj, ...allowedFields) => {
-  // Object.keys loop qua object cua json
-  // const newObj = {};
-  // Object.keys(obj).forEach(el => {
-  //   if (allowedFields.includes(el)) {
-  //     newObj[el] = obj[el];
-  //   }
-  // });
-  // return newObj;
   return Object.keys(obj).reduce((acc, el) => {
     if (allowedFields.includes(el)) {
       acc[el] = obj[el];
