@@ -304,39 +304,53 @@ color: var(--color-primary);
   outline-offset: 3px;
 }
 
+/* General header styles */
 .header {
   background-color: #444;
   padding: 0 5rem;
   height: 8rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   position: relative;
   z-index: 100;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
 }
-@media only screen and (max-width: 62.5em) {
-  .header {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-  }
-}
+
 .header__logo img {
   height: 3.5rem;
 }
+
+/* Media queries for responsiveness */
 @media only screen and (max-width: 62.5em) {
+  .header {
+    flex-direction: column;
+    padding: 2rem;
+  }
+
   .header__logo {
-    -webkit-box-ordinal-group: 0;
-    -ms-flex-order: -1;
     order: -1;
     margin-bottom: 1.5rem;
+  }
+
+  .nav--tours,
+  .nav--user {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .nav__el {
+    margin: 0.5rem 0;
+  }
+}
+
+@media only screen and (max-width: 37.5em) {
+  .nav--tours,
+  .nav--user {
+    flex-direction: column;
+  }
+
+  .nav__el {
+    margin: 1rem 0;
   }
 }
 
