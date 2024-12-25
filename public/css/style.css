@@ -1,7 +1,7 @@
 :root {
   --section-rotate: 9vw;
-  --color-primary: #5B9BD5 ; /* BlueViolet */
-  --color-secondary: #00008B; /* MediumOrchid */
+  --color-primary: #5B9BD5 ; /* LightBlue */
+  --color-secondary: #00008B; /* DarkBlue */ 
   --color-dark: #444;
   --color-shadow: rgba(0, 0, 0, 0.15);
 }
