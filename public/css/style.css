@@ -1657,3 +1657,55 @@ color: var(--color-primary);
       justify-content: flex-start;
   }
 }
+/* Adjust row width for manage pages */
+.review-row, .tour-row, .user-row {
+  display: flex;
+  flex-wrap: nowrap; /* Prevent rows from wrapping */
+  justify-content: space-between; /* Ensure space is utilized effectively */
+  align-items: center;
+  width: 100%; /* Ensure full-width rows */
+  max-width: 1200px; /* Optional: Set a maximum width */
+  margin: 0 auto; /* Center content */
+}
+
+.review-info, .tour-info, .user-info {
+  flex: 1; /* Allow sections to expand proportionally */
+  min-width: 200px; /* Ensure sections have a minimum width */
+  margin-right: 20px; /* Add spacing between sections */
+}
+
+.review-actions, .tour-actions, .user-actions {
+  flex-shrink: 0; /* Prevent shrinking of action buttons */
+}
+/* Default styles for wide containers */
+.container--wide {
+  width: 100%; /* Take full width of parent */
+  max-width: 600px; /* Limit max width, seems like 570isch is the widest possible */
+  padding: 0 20px; /* Add consistent padding */
+  margin: 0 auto; /* Center align */
+}
+
+
+/* Adjust for medium screens (e.g., tablets) */
+@media screen and (max-width: 1024px) {
+  .container--wide {
+      max-width: 960px; /* Slightly smaller max width */
+      padding: 0 15px; /* Adjust padding */
+  }
+}
+
+/* Adjust for small screens (e.g., phones) */
+@media screen and (max-width: 768px) {
+  .container--wide {
+      max-width: 720px; /* Smaller width for small screens */
+      padding: 0 10px; /* Less padding to save space */
+  }
+}
+
+/* Adjust for extra-small screens (e.g., very small phones) */
+@media screen and (max-width: 480px) {
+  .container--wide {
+      max-width: 100%; /* Full width */
+      padding: 0 5px; /* Minimal padding */
+  }
+}
