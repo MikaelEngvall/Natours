@@ -2,7 +2,7 @@
 
 Natours is a modern application built using Node.js, Express, MongoDB, and Mongoose. It is designed to provide a platform for managing and organizing tours and related services.
 
-![alt text](image.png)
+![alt text](image-1.png)
 
 ## 📁 Project Structure
 
@@ -107,33 +107,43 @@ This project is licensed under the ISC License!
    - Password reset via email
    - Role-based access control (admin, guide, user)
 
+![alt text](image-3.png)
+
 2. **Tour Management**
 
    - Create, read, update, and delete tours
    - Advanced filtering, sorting, and pagination of tours
    - Tour statistics and analytics
 
-3. **Booking System**
+   ![alt text](image-4.png)
+
+3) **Booking System**
 
    - Users can book tours
    - Secure payment processing with Stripe integration
    - Booking management for users and admins
 
-4. **User Profile**
+4) **User Profile**
 
    - Update user information
    - Change password
    - Upload and manage profile picture
+
+   ![alt text](image-5.png)
 
 5. **Review System**
 
    - Users can leave reviews for tours they've taken
    - Calculate and display average ratings for tours
 
+   ![alt text](image-6.png)
+
 6. **Interactive Maps**
 
    - Display tour locations on interactive maps
    - Show tour routes and stops
+
+   ![alt text](image-7.png)
 
 7. **Email Notifications**
 
