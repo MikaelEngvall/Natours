@@ -1,6 +1,8 @@
 # 🌄 Natours Project
 
 Natours is a modern application built using Node.js, Express, MongoDB, and Mongoose. It is designed to provide a platform for managing and organizing tours and related services.
+A lecture from [Udemy](https://www.udemy.com/) by [Jonas Schmedtmann](https://jonas.io/).
+[Node.js, Express, MongoDB & More: The Complete Bootcamp](https://www.udemy.com/course/nodejs-express-mongodb-bootcamp/?couponCode=ST12MT122624)
 
 ![alt text](image-1.png)
 
