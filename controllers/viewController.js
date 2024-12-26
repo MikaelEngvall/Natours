@@ -55,6 +55,19 @@ exports.getAccount = (req, res) => {
   });
 };
 
+exports.getManageTours = async (req, res, next) => {
+  try {
+    const tours = await Tour.find(); // Fetch all tours from the database
+    res.status(200).render('manage-tours', {
+      title: 'Manage Tours',
+      user: req.user, // Pass user info for navigation
+      tours // Pass the tours to the template
+    });
+  } catch (err) {
+    res.status(500).json({ status: 'error', message: 'Failed to load tours' });
+  }
+};
+
 exports.getMyTours = catchAsync(async (req, res, next) => {
   // 1) Find all bookings
   const bookings = await Booking.find({ user: req.user.id });

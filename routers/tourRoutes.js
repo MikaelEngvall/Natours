@@ -17,20 +17,6 @@ const {
 
 const router = express.Router();
 
-// router.param('id', checkID);
-
-// POST /tour/12das21d/reviews
-// GET /tour/12das21d/reviews
-// GET /tour/12das21d/reviews/123sas
-
-// router
-//   .route('/:tourId/reviews')
-//   .post(
-//     authController.protect,
-//     authController.restrictTo('user'),
-//     reviewController.createReview
-//   );
-
 router.use('/:tourId/reviews', reviewRouter);
 
 router.route('/top-5-cheap').get(aliasTopTours, getAllTours);

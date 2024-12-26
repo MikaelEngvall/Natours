@@ -61,5 +61,10 @@ router.patch('/delete-user/:id', authController.protect, async (req, res) => {
     res.status(500).json({ status: 'error', message: 'Error deleting user' });
   }
 });
-
+router.get(
+  '/manage-tours',
+  authController.protect,
+  authController.restrictTo('admin'),
+  viewController.getManageTours
+);
 module.exports = router;

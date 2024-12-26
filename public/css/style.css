@@ -1562,3 +1562,51 @@ color: var(--color-primary);
   border-radius: 10px;
   -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
   }
+
+ /* General row styling */
+.tour-row {
+  display: flex; /* Align items horizontally */
+  justify-content: space-between; /* Space out elements */
+  align-items: center; /* Center align items vertically */
+  padding: 1rem 0;
+  border-bottom: 1px solid #eaeaea; /* Add a divider between rows */
+}
+
+/* Image styling */
+.tour-image {
+  width: 50px; /* Match size used in manage-users */
+  height: 50px; /* Match size used in manage-users */
+  object-fit: cover; /* Ensure the image fits nicely */
+  border-radius: 50%; /* Circle image style */
+  margin-right: 1rem; /* Add spacing between image and text */
+}
+
+/* Tour info styling */
+.tour-info {
+  display: flex; /* Align the image and text horizontally */
+  align-items: center; /* Center align the image and text */
+  gap: 1rem; /* Add spacing between items */
+}
+
+/* Action buttons */
+.tour-actions button {
+  margin-left: 0.5rem; /* Add spacing between buttons */
+}
+
+/* Adjustments for small screens */
+@media (max-width: 768px) {
+  .tour-row {
+      flex-wrap: wrap; /* Stack items vertically */
+  }
+
+  .tour-info {
+      width: 100%; /* Take up full width on small screens */
+      margin-bottom: 1rem; /* Add spacing between info and actions */
+  }
+
+  .tour-actions {
+      width: 100%; /* Stack buttons horizontally */
+      display: flex;
+      justify-content: flex-start; /* Align buttons to the left */
+  }
+}
