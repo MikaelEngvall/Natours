@@ -1,19 +1,44 @@
 extends base
 
-block content
-  .container
-    h1 Manage Users
-    each user in users
-      .user-row
-        .user-info
-          img(src=`/img/users/${user.photo}`, alt=`Photo of ${user.name}`)
-          div
-            p Name: #{user.name}
-            p Role: #{user.role}
-        .user-actions
-          button.edit-btn Edit
-          button.view-btn View
-          button.delete-btn(data-id=user._id) Delete
+mixin navItem(link, text, icon, active) 
+    li(class=`${active ? 'side-nav--active': ''}`)
+        a(href=`${link}`)
+            svg
+                use(xlink:href=`img/icons.svg#icon-${icon}`)
+            | #{text}
+block content 
+    main.main
+        .user-view
+            nav.user-view__menu
+                ul.side-nav
+                    +navItem('#', 'Settings', 'settings', true)
+                    +navItem('/my-tours', 'My bookings', 'briefcase')
+                    +navItem('#', 'My reviews', 'star')
+                    +navItem('#', 'Billing', 'credit-card')
+                - if(user.role === 'admin')
+                    .admin-nav
+                        h5.admin-nav__heading Admin
+                        ul.side-nav
+                            +navItem('#', 'Manage tours', 'map')
+                            +navItem('/manage-users', 'Manage users', 'users')
+                            +navItem('#', 'Manage reviews', 'star')
+                            +navItem('#', 'Manage bookings', 'briefcase')
+
+            .user-view__content
+                .user-view__form-container
+                    h2.heading-secondary.ma-bt-md Manage Users
+                    .container
+                        each user in users
+                            .user-row
+                                .user-info
+                                    img(src=`/img/users/${user.photo}`, alt=`Photo of ${user.name}`)
+                                    div
+                                        p Name: #{user.name}
+                                        p Role: #{user.role}
+                                .user-actions
+                                    button.btn.btn--small.btn--green Edit
+                                    button.btn.btn--small.btn--blue View
+                                    button.btn.btn--small.btn--red(data-id=user._id) Delete
 
 block append scripts
-  script(src="/js/index.js")
+    script(src="/js/index.js")

@@ -12679,7 +12679,7 @@ var login = exports.login = /*#__PURE__*/function () {
             (0, _alerts.showAlert)('success', 'Logged in successfully!');
             window.setTimeout(function () {
               location.assign('/');
-            }, 1500);
+            }, 500);
           }
           _context.next = 10;
           break;
@@ -12711,7 +12711,7 @@ var logout = exports.logout = /*#__PURE__*/function () {
           });
         case 3:
           res = _context2.sent;
-          if (res.data.status === 'success') location.reload(true);
+          if (res.data.status === 'success') location.assign('/');
           _context2.next = 11;
           break;
         case 7:
