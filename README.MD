@@ -4,6 +4,7 @@ Natours is a modern application built using Node.js, Express, MongoDB, and Mongo
 
 ![alt text](image-1.png)
 
+
 <video controls src="20241226-0203-40.2335914.mp4" title="Title"></video>
 
 ## 📁 Project Structure
