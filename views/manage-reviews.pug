@@ -20,27 +20,27 @@ block content
                     .admin-nav
                         h5.admin-nav__heading Admin
                         ul.side-nav
-                            +navItem('/manage-tours', 'Manage tours', 'map', true)
+                            +navItem('/manage-tours', 'Manage tours', 'map', false)
                             +navItem('/manage-users', 'Manage users', 'users', false)
-                            +navItem('/manage-reviews', 'Manage reviews', 'star', false)
+                            +navItem('/manage-reviews', 'Manage reviews', 'star', true)
                             +navItem('#', 'Manage bookings', 'briefcase', false)
 
             .user-view__content
                 .user-view__form-container
-                    h2.heading-secondary.ma-bt-md Manage Tours
+                    h2.heading-secondary.ma-bt-md Manage Reviews
                     .container
-                        each tour in tours
-                            .tour-row
-                                .tour-info
-                                    img.tour-image(src=`/img/tours/${tour.imageCover}`, alt=`Image of ${tour.name}`)
+                        each review in reviews
+                            .review-row
+                                .review-info
+                                    img.review-image(src=`/img/users/${review.user.photo}`, alt=`Photo of ${review.user.name}`)
                                     div
-                                        p Name: #{tour.name}
-                                        p Duration: #{tour.duration} days
-                                        p Difficulty: #{tour.difficulty}
-                                .tour-actions
+                                        p Review by: #{review.user.name}
+                                        p Rating: #{review.rating} stars
+                                        p "#{review.review}"
+                                .review-actions
                                     button.btn.btn--small.btn--green Edit
                                     button.btn.btn--small.btn--blue View
-                                    button.btn.btn--small.btn--red(data-id=tour._id) Delete
+                                    button.btn.btn--small.btn--red(data-id=review._id) Delete
 
 block append scripts
     script(src="/js/index.js")

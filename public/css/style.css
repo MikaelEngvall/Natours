@@ -1610,3 +1610,50 @@ color: var(--color-primary);
       justify-content: flex-start; /* Align buttons to the left */
   }
 }
+/* General row styling */
+.review-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+  border-bottom: 1px solid #eaeaea;
+}
+
+/* Image styling */
+.review-image {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-right: 1rem;
+}
+
+/* Review info styling */
+.review-info {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* Action buttons */
+.review-actions button {
+  margin-left: 0.5rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .review-row {
+      flex-wrap: wrap;
+  }
+
+  .review-info {
+      width: 100%;
+      margin-bottom: 1rem;
+  }
+
+  .review-actions {
+      width: 100%;
+      display: flex;
+      justify-content: flex-start;
+  }
+}

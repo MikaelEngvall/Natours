@@ -1,5 +1,6 @@
 const Tour = require('../models/tourModel');
 const User = require('../models/userModel');
+const Review = require('../models/reviewModel');
 const Booking = require('../models/bookingModel');
 const catchAsync = require('../utils/catchAsync');
 const AppError = require('../utils/appError');
@@ -100,3 +101,20 @@ exports.updateUserData = catchAsync(async (req, res, next) => {
     user: updatedUser
   });
 });
+
+exports.getManageReviews = async (req, res, next) => {
+  try {
+    const reviews = await Review.find()
+      .populate('user')
+      .populate('tour'); // Fetch reviews with user and tour data
+    res.status(200).render('manage-reviews', {
+      title: 'Manage Reviews',
+      user: req.user, // Pass user info for navigation
+      reviews // Pass the reviews to the template
+    });
+  } catch (err) {
+    res
+      .status(500)
+      .json({ status: 'error', message: 'Failed to load reviews' });
+  }
+};
