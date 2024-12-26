@@ -237,7 +237,7 @@ body {
 }
 
 .btn--green {
-  background-color: green;
+  background-color: #5b9bd5;
   color: #fff;
 }
 .btn--green::after {
@@ -314,7 +314,7 @@ color: var(--color-primary);
 }
 
 .btn--red {
-  background-color: #dc3545; /* Danger color */
+  background-color: #00008b; /* Danger color */
   color: white; /* Text color */
 }
 
@@ -339,7 +339,7 @@ color: var(--color-primary);
 
 /* General header styles */
 .header {
-  background-color: #444;
+  background-color: #02054b;
   padding: 0 5rem;
   height: 8rem;
   display: flex;
@@ -747,6 +747,21 @@ color: var(--color-primary);
 }
 .reviews__star--inactive {
   fill: #bbb;
+}
+@media (max-width: 768px) {
+  .reviews {
+    display: flex; /* Use flexbox for centering */
+    flex-direction: column; /* Stack cards vertically */
+    align-items: center; /* Center align the cards */
+    justify-content: center; /* Ensure cards are centered vertically */
+    overflow-x: hidden; /* Prevent horizontal scroll */
+    padding: 2rem; /* Add some padding around the cards */
+  }
+
+  .reviews__card {
+    width: 90%; /* Make the card responsive */
+    margin-bottom: 2rem; /* Add spacing between cards */
+  }
 }
 
 .section-cta {
