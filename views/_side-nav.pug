@@ -3,8 +3,8 @@ mixin sideNav(user, currentPage)
         ul.side-nav
             +navItem('/me', 'Settings', 'settings', currentPage === 'settings')
             +navItem('/my-tours', 'My bookings', 'briefcase', currentPage === 'my-tours')
-            +navItem('#', 'My reviews', 'star', currentPage === 'my-reviews')
-            +navItem('#', 'Billing', 'credit-card', currentPage === 'billing')
+            +navItem('/my-reviews', 'My reviews', 'star', currentPage === 'my-reviews')
+            +navItem('/billing', 'Billing', 'credit-card', currentPage === 'billing')
         if user.role === 'admin'
             .admin-nav
                 h5.admin-nav__heading Admin
@@ -12,4 +12,4 @@ mixin sideNav(user, currentPage)
                     +navItem('/manage-tours', 'Manage tours', 'map', currentPage === 'manage-tours')
                     +navItem('/manage-users', 'Manage users', 'users', currentPage === 'manage-users')
                     +navItem('/manage-reviews', 'Manage reviews', 'star', currentPage === 'manage-reviews')
-                    +navItem('#', 'Manage bookings', 'briefcase', currentPage === 'manage-bookings')
+                    +navItem('/manage-bookings', 'Manage bookings', 'briefcase', currentPage === 'manage-bookings')
