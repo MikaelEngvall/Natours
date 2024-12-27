@@ -1,0 +1,19 @@
+mixin navItem(link, text, icon, active = false)
+    li(class=`${active ? 'side-nav--active' : ''}`)
+        a(href=`${link}`)
+            svg
+                use(xlink:href=`img/icons.svg#icon-${icon}`)
+            | #{text}
+
+mixin formField(label, id, type, placeholder = '', value = '', required = true, extraAttrs = {})
+    .form__group
+        label.form__label(for=id) #{label}
+        input.form__input(
+            type=type,
+            id=id,
+            name=id,
+            placeholder=placeholder,
+            value=value,
+            required=required
+            ...extraAttrs
+        )

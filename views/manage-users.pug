@@ -1,28 +1,12 @@
 extends base
 
-mixin navItem(link, text, icon, active) 
-    li(class=`${active ? 'side-nav--active': ''}`)
-        a(href=`${link}`)
-            svg
-                use(xlink:href=`img/icons.svg#icon-${icon}`)
-            | #{text}
-block content 
+include mixins
+include _side-nav
+
+block content
     main.main
         .user-view
-            nav.user-view__menu
-                ul.side-nav
-                    +navItem('/me', 'Settings', 'settings', false)
-                    +navItem('/my-tours', 'My bookings', 'briefcase')
-                    +navItem('#', 'My reviews', 'star')
-                    +navItem('#', 'Billing', 'credit-card')
-                - if(user.role === 'admin')
-                    .admin-nav
-                        h5.admin-nav__heading Admin
-                        ul.side-nav
-                            +navItem('/manage-tours', 'Manage tours', 'map', false)
-                            +navItem('/manage-users', 'Manage users', 'users', true)
-                            +navItem('/manage-reviews', 'Manage reviews', 'star', false)
-                            +navItem('#', 'Manage bookings', 'briefcase')
+            +sideNav(user, 'manage-users')
 
             .user-view__content
                 .user-view__form-container
