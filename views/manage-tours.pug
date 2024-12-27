@@ -20,10 +20,7 @@ block content
                                         p Name: #{tour.name}
                                         p Duration: #{tour.duration} days
                                         p Difficulty: #{tour.difficulty}
-                                .tour-actions
-                                    button.btn.btn--small.btn--green Edit
-                                    button.btn.btn--small.btn--blue View
-                                    button.btn.btn--small.btn--red(data-id=tour._id) Delete
+                                +itemActions(tour._id)
 
 block append scripts
     script(src="/js/index.js")

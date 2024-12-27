@@ -20,10 +20,7 @@ block content
                                         p Review by: #{review.user.name}
                                         p Rating: #{review.rating} stars
                                         p "#{review.review}"
-                                .review-actions
-                                    button.btn.btn--small.btn--green Edit
-                                    button.btn.btn--small.btn--blue View
-                                    button.btn.btn--small.btn--red(data-id=review._id) Delete
+                                +itemActions(review._id)
 
 block append scripts
     script(src="/js/index.js")

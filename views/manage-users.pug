@@ -19,10 +19,7 @@ block content
                                     div
                                         p Name: #{user.name}
                                         p Role: #{user.role}
-                                .user-actions
-                                    button.btn.btn--small.btn--green Edit
-                                    button.btn.btn--small.btn--blue View
-                                    button.btn.btn--small.btn--red(data-id=user._id) Delete
+                                +itemActions(user._id)
 
 block append scripts
     script(src="/js/index.js")

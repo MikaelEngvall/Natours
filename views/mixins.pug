@@ -17,3 +17,8 @@ mixin formField(label, id, type, placeholder = '', value = '', required = true, 
             required=required
             ...extraAttrs
         )
+mixin itemActions(id)
+    .item-actions
+        button.btn.btn--small.btn--green(data-id=id) Edit
+        button.btn.btn--small.btn--blue(data-id=id) View
+        button.btn.btn--small.btn--red(data-id=id) Delete
