@@ -1,5 +1,9 @@
 mixin sideNav(user, currentPage)
-    nav.user-view__menu
+    nav.user-view__menu(class='sidebar')
+        // Hamburger button
+        button.sidebar__toggle(type='button')
+            svg.sidebar__icon
+                use(xlink:href=`img/icons.svg#icon-menu`)
         ul.side-nav
             +navItem('/me', 'Settings', 'settings', currentPage === 'settings')
             +navItem('/my-tours', 'My bookings', 'briefcase', currentPage === 'my-tours')

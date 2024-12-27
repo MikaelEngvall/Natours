@@ -123,3 +123,21 @@ document.addEventListener('DOMContentLoaded', () => {
     sidebar.classList.toggle('open'); // Add/remove "open" class to toggle visibility
   });
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+  const sidebar = document.querySelector('.sidebar');
+  const toggleButton = document.querySelector('.sidebar__toggle');
+  const icon = toggleButton.querySelector('use');
+
+  toggleButton.addEventListener('click', () => {
+    sidebar.classList.toggle('expanded');
+    sidebar.classList.toggle('collapsed');
+
+    // Toggle icon between hamburger and "X"
+    const isExpanded = sidebar.classList.contains('expanded');
+    icon.setAttribute(
+      'xlink:href',
+      `img/icons.svg#icon-${isExpanded ? 'close' : 'menu'}`
+    );
+  });
+});
