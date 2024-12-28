@@ -48,22 +48,19 @@ const scriptSrcUrls = [
   'https://unpkg.com/',
   'https://tile.openstreetmap.org',
   'https://cdnjs.cloudflare.com/ajax/libs/axios/1.3.2/axios.min.js',
-  'https://js.stripe.com/v3/',
-  'https://my-natours.onrender.com/'
+  'https://js.stripe.com/v3/'
 ];
 const styleSrcUrls = [
   'https://unpkg.com/',
   'https://tile.openstreetmap.org',
   'https://fonts.googleapis.com/',
-  'https://js.stripe.com/',
-  'https://my-natours.onrender.com/'
+  'https://js.stripe.com/'
 ];
 const connectSrcUrls = [
   'https://unpkg.com',
   'https://tile.openstreetmap.org',
   'ws://127.0.0.1:*/',
-  'https://js.stripe.com/',
-  'https://my-natours.onrender.com/'
+  'https://js.stripe.com/'
 ];
 const fontSrcUrls = ['fonts.googleapis.com', 'fonts.gstatic.com'];
 
