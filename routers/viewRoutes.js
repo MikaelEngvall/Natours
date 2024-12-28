@@ -2,7 +2,7 @@ const express = require('express');
 const viewController = require('../controllers/viewController');
 const authController = require('../controllers/authController');
 const User = require('../models/userModel'); // Adjust the path as necessary
-// const bookingController = require('../controllers/bookingController');
+const bookingController = require('../controllers/bookingController');
 
 const router = express.Router();
 
@@ -25,7 +25,12 @@ router.get('/signup', authController.isLoggedIn, (req, res) => {
   });
 });
 router.get('/me', authController.protect, viewController.getAccount);
-router.get('/my-tours', authController.protect, viewController.getMyTours);
+router.get(
+  '/my-tours',
+  bookingController.createBookingCheckout,
+  authController.protect,
+  viewController.getMyTours
+);
 
 router.post(
   '/submit-user-data',
