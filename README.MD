@@ -4,6 +4,8 @@ Natours is a modern application built using Node.js, Express, MongoDB, and Mongo
 A lecture from [Udemy](https://www.udemy.com/) by [Jonas Schmedtmann](https://jonas.io/).
 [Node.js, Express, MongoDB & More: The Complete Bootcamp](https://www.udemy.com/course/nodejs-express-mongodb-bootcamp/?couponCode=ST12MT122624)
 
+Made the project more responsive and added som pages to it.
+
 ![alt text](image-1.png)
 
 
